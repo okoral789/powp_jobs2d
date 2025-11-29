@@ -15,6 +15,7 @@ public class MyAdapter extends DrawPanelController implements Job2dDriver {
 		super();
 	}
 
+
 	@Override
 	public void setPosition(int x, int y) {
 		this.startX = x;
@@ -28,8 +29,8 @@ public class MyAdapter extends DrawPanelController implements Job2dDriver {
 		line.setEndCoordinates(x, y);
 
 		drawLine(line);
-		this.startX = x;
-		this.startY = y;
+		setPosition(x, y);
+
 	}
 
 	@Override
